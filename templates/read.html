@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saved Messages</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Saved Messages</h1>
+    <ul>
+        {% for timestamp, message_data in messages.items() %}
+            <li>
+                <strong>{{ message_data.username }}:</strong> {{ message_data.message }}
+                <small>({{ timestamp }})</small>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
